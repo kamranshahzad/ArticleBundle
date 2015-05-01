@@ -1,0 +1,4 @@
+article_annotation:
+    resource: "@KamranArticleBundle/Controller"
+    type:     annotation
+    

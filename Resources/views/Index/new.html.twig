@@ -1,0 +1,25 @@
+{% extends themes %}
+
+{% set my_form_theme = "KamranTagsBundle:Common:Form/fields.html.twig" %}
+
+{%- block title -%}
+    Add New Tag
+{%- endblock title -%}
+
+{% block body %}
+
+<div class="col-lg-6">
+        <fieldset>
+            <legend>Example extended forms via view</legend>
+                {%- form_theme form my_form_theme -%}
+                <form class="entity" action="{{ path('tags_create') }}" method="post"  class="form-horizontal">
+                    {{ form_errors(form) }}
+                    {{ form_rest(form) }}
+                    <div class="actions">
+                        <button type="submit">Add</button>
+                    </div>
+                </form>
+        </fieldset>
+</div>
+
+{% endblock body %}
